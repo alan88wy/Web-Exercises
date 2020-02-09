@@ -1,0 +1,99 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <style>
+            #box {
+                width: 200px;
+                height: 200px;
+                background-color: orangered;
+                margin: 50px;
+            }
+
+            #box:hover {
+                /*
+                   animation properties:
+                       - animation-name
+                       - animation-duration
+                       - animation-timing-function
+                            - linear
+                            - ease
+                            - ease-in
+                            - ease-out
+                            - ease-in-out
+                            - step-start
+                            - step-end
+                            - steps(int, start|end)
+                            - cubic-bezier(x1, y1, x2, y2)
+                                - Cubic Bezier curve
+                                - x/y = 0-1
+                            - initial
+                            - inherit
+                       - animation-delay
+                       - animation-iteration-count
+                                - <number> = how many times play
+                                - infinite
+                                - initial
+                                - inherit
+                       - animation-direction
+                                - normal (forwards)
+                                - reverse (backwards)
+                                - alternate (forward then backward)
+                                - alternate-reverse (backword then forward)
+                                - initial
+                                - inherit
+                       - animation-fill-mode
+                                - none
+                                - forwards (retain value set by last keyframe)
+                                - backwards (value set by first keyframe)
+                                - both (follow forward and backward rules)
+                                - initial
+                                - inherit
+                       - animation-play-state
+                                - paused
+                                - running
+                                - initial
+                                - inherit
+
+                   Example:
+
+                   myFrame : animation-name
+                   5s : animation-duration
+                   linear: animation-timing function 
+                   0s : animation-delay
+                    
+                   Below will pause anymation when hover over it.
+
+                   div:hover {
+                      animation-play-state: paused;
+                   }
+
+
+                 */
+                animation: myFrame 5s linear 0s infinite;
+            }
+
+            @keyframes myFrame {
+                /* percentage of the total duration set to have that property.
+                 5s * 50% = 2.5s having width of 100px;
+                */
+                0% {
+                    width: 300px;
+                }
+                20% {
+                    height: 400px;
+                }
+                50% {
+                    width: 100px;
+                }
+                100% {
+                    width: 200px;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="box"></div>
+    </body>
+
+</html>
